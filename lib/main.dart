@@ -103,6 +103,9 @@ class _SignupPageState extends State<SignupPage> {
                   if (value == null || value.isEmpty) {
                     return 'Please enter a password';
                   }
+                  if (value != _passwordController.text){
+                    return 'Passwords do not match';
+                  }
                   if (value.length < 6) {
                     return 'Password must be at least 6 characters';
                   }
